@@ -7,10 +7,13 @@ class Solution:
             return -1
         
         for i in range(0, len(haystack)):
+            print(f"i from 0 to {len(haystack)}")
+            
             starting_index = i
             print(f"Starting index: {starting_index}")
             if needle[needle_index] == haystack[i]:
                 for j in range(i, len(needle) + i):
+                    print(f"j from {i} to {len(needle) + i}")
                     print(f"needle {needle[needle_index]} hays {haystack[j]}")
                     if needle[needle_index] == haystack[j]:
                         needle_counter = needle_counter + 1
@@ -31,6 +34,7 @@ def main():
     solution = Solution()
     haystack = "mississippi"
     needle = "issipi"
+    print(f"Needle length {len(needle)} Haystack Length {len(haystack)}")
     print(f"Index: {solution.strStr(haystack, needle)}")
 
 if __name__ == "__main__":

@@ -1,3 +1,7 @@
+# Helpful imports
+# List
+from typing import List  # Import the List type hint
+
 class Solution:
     test = ""
 
