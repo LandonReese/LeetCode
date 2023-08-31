@@ -11,19 +11,56 @@ class Solution:
             int: Returns the maximum profit if stock is bought and sold optimally 
         """
         return_value = 0
+        
         highest_optimal_index = -1
         lowest_optimal_index = -1
+        highest_value = -1
+        lowest_value = prices[0]
         
         for i in range(0, len(prices)):
-            if prices[i] 
+            if prices[i] > highest_value:
+                highest_value = prices[i]
+                highest_optimal_index = i
+                print(f"highest_value {highest_value} | highest_optimal_index {highest_optimal_index}")
+                
+            elif prices[i] < lowest_value:
+                lowest_value = prices[i]
+                lowest_optimal_index = i
+                print(f"lowest_value {lowest_value} | lowest_optimal_index {lowest_optimal_index}")
         
-        
+        if highest_optimal_index < lowest_optimal_index:
+            print(f"highest_optimal_index < lowest_optimal_index")
+            print(f"{highest_optimal_index} < {lowest_optimal_index}")
         
             
         print(f"r_v {return_value}")
         return return_value
     
-    
+    def helper(self, prices: List[int]):
+        return_value = 0
+        
+        highest_optimal_index = -1
+        lowest_optimal_index = -1
+        highest_value = -1
+        lowest_value = prices[0]
+        
+        for i in range(0, len(prices)):
+            if prices[i] > highest_value:
+                highest_value = prices[i]
+                highest_optimal_index = i
+                print(f"highest_value {highest_value} | highest_optimal_index {highest_optimal_index}")
+                
+            elif prices[i] < lowest_value:
+                lowest_value = prices[i]
+                lowest_optimal_index = i
+                print(f"lowest_value {lowest_value} | lowest_optimal_index {lowest_optimal_index}")
+        
+        if highest_optimal_index < lowest_optimal_index:
+            print(f"highest_optimal_index < lowest_optimal_index")
+            print(f"{highest_optimal_index} < {lowest_optimal_index}")
+        
+            
+        print(f"r_v {return_value}")
 
 def main():
     solution = Solution()
