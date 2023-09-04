@@ -8,6 +8,7 @@ class Solution:
 
             if number_to_add not in unique_numbers:
                 unique_numbers[number_to_add] = None
+        
         nums = list(unique_numbers.keys())
         print(f"Unique Numbers | {len(list(unique_numbers.keys()))}")
         print(f"Nums | {nums}")
