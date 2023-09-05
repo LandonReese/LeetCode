@@ -9,7 +9,9 @@ class Solution:
             if number_to_add not in unique_numbers:
                 unique_numbers[number_to_add] = None
         
-        nums = list(unique_numbers.keys())
+        number_list = list(unique_numbers.keys())
+        for i in range(0, len(number_list)):
+            nums[i] = number_list[i]
         print(f"Unique Numbers | {len(list(unique_numbers.keys()))}")
         print(f"Nums | {nums}")
         print(f"unique_nums | {unique_numbers}")

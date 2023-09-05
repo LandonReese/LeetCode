@@ -1,11 +1,5 @@
 https://leetcode.com/problemset/all/?sorting=W3sic29ydE9yZGVyIjoiQVNDRU5ESU5HIiwib3JkZXJCeSI6IkRJRkZJQ1VMVFkifV0%3D
 
-13
-https://leetcode.com/problems/roman-to-integer/
-
-26
-https://leetcode.com/problems/remove-duplicates-from-sorted-array/
-
 83
 https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 
