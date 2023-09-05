@@ -1,5 +1,25 @@
 https://leetcode.com/problemset/all/?sorting=W3sic29ydE9yZGVyIjoiQVNDRU5ESU5HIiwib3JkZXJCeSI6IkRJRkZJQ1VMVFkifV0%3D
 
-228
-https://leetcode.com/problems/summary-ranges/
+13
+https://leetcode.com/problems/roman-to-integer/
 
+26
+https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
+83
+https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+
+86
+https://leetcode.com/problems/partition-list/
+
+121
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+387
+https://leetcode.com/problems/first-unique-character-in-a-string/
+
+605
+https://leetcode.com/problems/can-place-flowers/
+
+2404
+https://leetcode.com/problems/most-frequent-even-element/
