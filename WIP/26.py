@@ -12,6 +12,7 @@ class Solution:
         nums = list(unique_numbers.keys())
         print(f"Unique Numbers | {len(list(unique_numbers.keys()))}")
         print(f"Nums | {nums}")
+        print(f"unique_nums | {unique_numbers}")
         return len(list(unique_numbers.keys()))
         
 def main():
