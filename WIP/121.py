@@ -10,57 +10,28 @@ class Solution:
         Returns:
             int: Returns the maximum profit if stock is bought and sold optimally 
         """
-        return_value = 0
+        highest = 0
+        lowest = prices[0]
+        highest_index = 0
+        lowest_index = 0
         
-        highest_optimal_index = -1
-        lowest_optimal_index = -1
-        highest_value = -1
-        lowest_value = prices[0]
+        for i in range(len(prices) - 1, -1, -1):
+            print(prices[i])
+            if highest < prices[i]:
+                highest = prices[i]
+                highest_index = i
+            if lowest > prices[i]:
+                lowest = prices[i]
+                lowest_index = i
         
-        for i in range(0, len(prices)):
-            if prices[i] > highest_value:
-                highest_value = prices[i]
-                highest_optimal_index = i
-                print(f"highest_value {highest_value} | highest_optimal_index {highest_optimal_index}")
-                
-            elif prices[i] < lowest_value:
-                lowest_value = prices[i]
-                lowest_optimal_index = i
-                print(f"lowest_value {lowest_value} | lowest_optimal_index {lowest_optimal_index}")
+        print(f"L: {lowest} | H: {highest}")
+        print(f"LI: {lowest_index} | HI: {highest_index}")
+
+        if highest_index > lowest_index:
+            return highest - lowest
         
-        if highest_optimal_index < lowest_optimal_index:
-            print(f"highest_optimal_index < lowest_optimal_index")
-            print(f"{highest_optimal_index} < {lowest_optimal_index}")
-        
-            
-        print(f"r_v {return_value}")
-        return return_value
     
-    def helper(self, prices: List[int]):
-        return_value = 0
-        
-        highest_optimal_index = -1
-        lowest_optimal_index = -1
-        highest_value = -1
-        lowest_value = prices[0]
-        
-        for i in range(0, len(prices)):
-            if prices[i] > highest_value:
-                highest_value = prices[i]
-                highest_optimal_index = i
-                print(f"highest_value {highest_value} | highest_optimal_index {highest_optimal_index}")
-                
-            elif prices[i] < lowest_value:
-                lowest_value = prices[i]
-                lowest_optimal_index = i
-                print(f"lowest_value {lowest_value} | lowest_optimal_index {lowest_optimal_index}")
-        
-        if highest_optimal_index < lowest_optimal_index:
-            print(f"highest_optimal_index < lowest_optimal_index")
-            print(f"{highest_optimal_index} < {lowest_optimal_index}")
-        
-            
-        print(f"r_v {return_value}")
+
 
 def main():
     solution = Solution()
@@ -91,3 +62,56 @@ if __name__ == "__main__":
             
 #         # print(f"r_v {return_value}")
 #         return return_value
+
+# Second attempt
+# return_value = 0
+        
+#         highest_optimal_index = -1
+#         lowest_optimal_index = -1
+#         highest_value = -1
+#         lowest_value = prices[0]
+        
+#         for i in range(0, len(prices)):
+#             if prices[i] > highest_value:
+#                 highest_value = prices[i]
+#                 highest_optimal_index = i
+#                 print(f"highest_value {highest_value} | highest_optimal_index {highest_optimal_index}")
+                
+#             elif prices[i] < lowest_value:
+#                 lowest_value = prices[i]
+#                 lowest_optimal_index = i
+#                 print(f"lowest_value {lowest_value} | lowest_optimal_index {lowest_optimal_index}")
+        
+#         if highest_optimal_index < lowest_optimal_index:
+#             print(f"highest_optimal_index < lowest_optimal_index")
+#             print(f"{highest_optimal_index} < {lowest_optimal_index}")
+        
+            
+#         print(f"r_v {return_value}")
+#         return return_value
+    
+#     def helper(self, prices: List[int]):
+#         return_value = 0
+        
+#         highest_optimal_index = -1
+#         lowest_optimal_index = -1
+#         highest_value = -1
+#         lowest_value = prices[0]
+        
+#         for i in range(0, len(prices)):
+#             if prices[i] > highest_value:
+#                 highest_value = prices[i]
+#                 highest_optimal_index = i
+#                 print(f"highest_value {highest_value} | highest_optimal_index {highest_optimal_index}")
+                
+#             elif prices[i] < lowest_value:
+#                 lowest_value = prices[i]
+#                 lowest_optimal_index = i
+#                 print(f"lowest_value {lowest_value} | lowest_optimal_index {lowest_optimal_index}")
+        
+#         if highest_optimal_index < lowest_optimal_index:
+#             print(f"highest_optimal_index < lowest_optimal_index")
+#             print(f"{highest_optimal_index} < {lowest_optimal_index}")
+        
+            
+#         print(f"r_v {return_value}")
