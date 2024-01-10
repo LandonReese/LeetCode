@@ -1,15 +1,28 @@
 class Solution:
     def myAtoi(self, s: str) -> int:
         negative = False
+        
+        if "-" in s:
+            negative = True
+            s = s.replace("-", "")
+
+        while s[0] == " ":
+            s = s.replace(" ", "", 1)
+            print(s)
+
+        print(s)
+        
         string = ""
+
         for i in range(0, len(s)):
             try:
-                if s[i] == "-":
-                    negative = True
-                elif int(s[i]):
+                if int(s[i]):
                     string += str(s[i])
             except:
-                print("Not a number")
+                string = "0"
+                break
+
+        print(string)
 
         
         string = int(string)
@@ -38,7 +51,7 @@ def main():
     s = Solution()
 
     for i in range(0, len(inputs)):
-        assert(s.myAtoi(inputs[i]) == outputs[i])
+        assert( s.myAtoi(inputs[i]) == outputs[i])
     
     
     print("hi")
