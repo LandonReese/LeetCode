@@ -7,24 +7,14 @@ class Solution:
         for i in range(0, n):
             for j in range(i + 1, n):
                 for k in range(j + 1, n):
-                    if i == j or i == k or j == k:
-                        continue
-                    else:
-                        if nums[i] + nums[j] + nums[k] == 0:
-                            return_list.append([nums[i], nums[j], nums[k]])
-                            #print(return_list)
-        
-         
-        for i in range(0, len(return_list)):
-            return_list[i] = sorted(return_list[i])   
-          
-        
-        unique_list = []  
-        for i in range(0, len(return_list)):
-            if return_list[i] not in unique_list:
-                unique_list.append(return_list[i])
+                    if nums[i] + nums[j] + nums[k] == 0:
+                        ret = sorted([nums[i], nums[j], nums[k]])
+                        if ret not in return_list:
+                            return_list.append(ret)
+
+        print(return_list)
                     
-        return unique_list
+        return return_list
                         
         
 def main():
